@@ -16,11 +16,12 @@ class EtudiantFactory extends Factory
     {
         return [
             'nom' => $this->faker->name(),
-            'adresse' => $this->faker->sentence,
+            'adresse' => $this->faker->address(),
             'phone' => $this->faker->numerify('###-###-####'),
             'email' => $this->faker->unique()->safeEmail(),
-            'date_de_naissance' => $this->faker->dateTimeBetween($startDate = '-80 years', $endDate = 'now', $timezone = null),
-            'villeId' => Ville::factory()
+            'date_de_naissance' => $this->faker->dateTimeBetween($startDate = '-100 years', $endDate = 'now', $timezone = null),
+            // 'villeId' => Ville::factory()
+            'villeId' => $this->faker->numberBetween(1, 15)
         ];
     }
 }
