@@ -14,7 +14,8 @@ class VilleController extends Controller
      */
     public function index()
     {
-        //
+        $listeVilles = Ville::all();
+        return view('layouts.villes',['listeVilles' => $listeVilles]);
     }
 
     /**
@@ -46,7 +47,7 @@ class VilleController extends Controller
      */
     public function show(Ville $ville)
     {
-        //
+        return $ville;
     }
 
     /**

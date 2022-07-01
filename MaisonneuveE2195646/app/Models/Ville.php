@@ -9,3 +9,4 @@ class Ville extends Model
 {
     use HasFactory;
 }
+
